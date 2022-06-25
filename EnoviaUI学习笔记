@@ -1,0 +1,129 @@
+
+
+
+
+
+
+# 四类User 
+
+
+
++ person   由分为六种级别 
+  + (application user 只能通过mql 操作数据库 
+  + full user  **用户可以登陆****Matrix Navigator****端**
+  + business admin  **可以登陆****Business****端**
+  + system admin
+  + trusted **所有对象的****READ****权限**
+  + inactive  什么活动也不能参加 
++ group
++ role
++ association 
+
+​	
+
+# 数据对象
+
++ 预定义   管理对象    业务对象  
+  + 包括  attribute command 菜单  policy  relationship  JPO程序对象
+  + 每个JPO都有一个基类和延伸类  
+  + 基类包含基本业务逻辑  延伸类拓展业务逻辑
+  + 默认用的是延伸类 
++ 程序对象    JPO   java平台对象
++ 用户接口 
+
+# property属性文件
+
+webinf/classes 目录下
+
+emsSystem.property   系统级属性   定义了导航页面 展示和功能  时间日期 选择器   通知 搜索   
+
+emxlogin.property    登陆属性    定义了 加载那些jsp  和图片  和颜色   (源码)
+
+stringresource  一组多语言支持文件  显示字段名称和一些错误信息                    其中中文配置文件  是zh-cn
+
+<img src="https://s2.loli.net/2022/03/30/vrtVZN3lh6ugMHw.png" alt="image-20220330101531984" style="zoom:80%;" />
+
+
+
+
+
+#  组件   
+
++ top banner  顶部导航  全局导航栏      MyDesk  Actions   Toolbar   AEFGlobleSearch
++ Mydesk Menu  Actions Menu     Menu 下面还可以有menu   可以嵌套   最底层是一个command  
++ 每个command都有一个link   包括一个herf  引用地址    一个alt提示信息
++ 比如键盘这个command 
++   ${COMMON_DIR}/emxTable.jsp?inquiry=DemoFindKeyBoard&table=DemoKeyboardSummary&toolbar=DemoKBToolBar
++    这个jsp有三个参数      inquiry      table    toolbar  
+
+
+
+menu 有个name    有个lable   用于设置多语言
+
+如果改成中文   到  zhcn  property文件 里设置就行
+
++ 设置那些角色 可以访问到 
+
+
+
+![image-20220330105812935](https://s2.loli.net/2022/03/30/sH3ra6BleLnz1Xq.png)
+
+
+
+#   jsp 传递的参数
+
+有的参数不需要手动传递,  他是自动传递的     比如  ObjectID  jsTreeID  StringResourceField 
+
+
+
+手动传递的参数  参数赋值 用&隔开    
+
+	+ type 
+	%2C  是十六进制的逗号 
+	+ ​    typeChooser  类型选择器    可以设定为 true 或者false
+	+ policy   策略   Production
+	+ form  记载哪个表单  CreateKeyBoard
+	+ vaultChooser   存储选择器  可以设定为 true 或者false
+	+ header   标题  要显示的文字
+	+ submitAction  refreshCaller   指定 点击提交按钮 要执行的动作
+	+ suiteKey  自动参数      Framework   
+
++ StringResourceFileId  用于国际化  显示不同的语言 
++ SuiteDirectory    配套的文件目录   common  
+
+
+
+
+
+emxForm.jsp  传递的参数   
+
+	+  form
+	+  mode=edit
+	+    suiteKey
+	+  StringResourceFileId  
+	+  SuiteDirectory
+	+  objectId
+	+  parentOID
+
+
+
+emxLifecycle.jsp
+
+
+
+
+
+# 表格
+
+排序                   
+
+表中元素链接   
+
+页面工具栏  Actions  
+
+exmTable.jsp  参数   
+
+
+
+分页       emxSystem.properties默认设置emxFramework.PaginationRange （默认值= 10 ) ，可以使用分页请求参数重写每个人的配置表格
+

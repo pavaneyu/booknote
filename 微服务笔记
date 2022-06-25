@@ -1,0 +1,318 @@
+[TOC]
+
+<img src="https://s2.loli.net/2022/05/18/enw3HQ5AuiUDBra.png" alt="image-20220518170434986" style="zoom: 200%;" />
+
+#  服务治理
+
+怎么拆分   拆分程度   
+
+如何远程调用   
+
+
+
+![](https://s2.loli.net/2022/05/18/r47Afonqg9lMa25.png)
+
+
+
+
+
+![image-20220520204730436](https://s2.loli.net/2022/05/20/OY6MHSu9jzDpkAn.png)
+
+![image-20220520205005224](https://s2.loli.net/2022/05/20/wUeKC9NAghWnuf4.png)
+
+
+
+
+
+注册中心   1.服务发现负载均衡选最优   2.心跳检测 感知健康
+
+
+
+
+
+![image-20220520210140000](https://s2.loli.net/2022/05/20/SwKY67DazJxIdie.png)
+
+![image-20220520210637958](https://s2.loli.net/2022/05/20/BgPzLwjqW6YSVRi.png)
+
+![image-20220520212703976](https://s2.loli.net/2022/05/20/lOBRCMmg2wjPkZc.png)
+
+
+
+
+
+
+
+
+
+Ribbon 的默认 负载均衡    round  robin   轮询 
+
+
+
+
+
+![image-20220520214556695](https://s2.loli.net/2022/05/20/ycSj4Kf7u5NOihA.png)
+
+
+
+
+
+![image-20220520215023697](https://s2.loli.net/2022/05/20/YS42WCONeFjJMtz.png)
+
+
+
+
+
+![image-20220520220635418](https://s2.loli.net/2022/05/20/uAnVH2sTw7G6513.png)
+
+![image-20220520220651390](https://s2.loli.net/2022/05/20/rhcFto5Cq4VH1P9.png)
+
+
+
+
+
+![image-20220520221410275](../../../../AppData/Roaming/Typora/typora-user-images/image-20220520221410275.png)
+
+![image-20220521093826763](https://s2.loli.net/2022/05/21/ydMgQclKPTew3EH.png)
+
+![image-20220521102026409](https://s2.loli.net/2022/05/21/mOgnbLiBRyshe4K.png)
+
+![image-20220522224249435](https://s2.loli.net/2022/05/22/eoW9xJGcLqNylrB.png)
+
+
+
+配置文件里 nameSpace没有设置              nameSpace就在默认public下
+
+
+
+
+
+# nacos 配置管理
+
+
+
+![    ](https://s2.loli.net/2022/05/24/AJwfavZTB6qNoed.png)
+
+![image-20220524113411227](https://s2.loli.net/2022/05/24/L5m7tSYyrxazg6A.png)
+
+
+
+
+
+![](https://s2.loli.net/2022/05/24/UpFsIfK3MP9cBbo.png)
+
+
+
+# 配置热更新 
+
+![image-20220524121200080](https://s2.loli.net/2022/05/24/Jom1H37sDVflRTU.png)
+
+
+
+#    配置文件 在多环境共享
+
+![image-20220524135725922](https://s2.loli.net/2022/05/24/sGAcz9r4wnTJ2eu.png)
+
+#   nacos 集群
+
+![image-20220524152807660](https://s2.loli.net/2022/05/24/FWeJ4PpoVRhvn71.png)
+
+
+
+
+
+
+#   Feign  服务调用 
+
+![image-20220524153002261](https://s2.loli.net/2022/05/24/O6UcaIJBVTXep4j.png)
+
+![image-20220524153323979](https://s2.loli.net/2022/05/24/YLbHai4sBdF1Elg.png)
+
+![image-20220524164625370](https://s2.loli.net/2022/05/24/ODTpyH6o3KPzaBN.png)
+
+![image-20220524165521054](https://s2.loli.net/2022/05/24/xIzSEqt9Tsr2GBL.png)
+
+
+
+
+
+
+
+ #  网关
+
+![image-20220524193012628](https://s2.loli.net/2022/05/24/dvYVoEBta5APefr.png)
+
+![image-20220524193137867](https://s2.loli.net/2022/05/24/ofkt9QnGgHj4vJc.png)
+
+![image-20220524193430411](https://s2.loli.net/2022/05/24/1HPMNKyLakJwmc5.png)
+
+![image-20220524193604458](https://s2.loli.net/2022/05/24/cGvkMwg4QS5sUqy.png)
+
+
+
+![image-20220527211907110](../../../../AppData/Roaming/Typora/typora-user-images/image-20220527211907110.png)
+
+![image-20220527230247565](../../../../AppData/Roaming/Typora/typora-user-images/image-20220527230247565.png)
+
+![image-20220527231009681](../../../../AppData/Roaming/Typora/typora-user-images/image-20220527231009681.png)
+
+
+
+
+
+#   docker
+
+![image-20220527232312531](../../../../AppData/Roaming/Typora/typora-user-images/image-20220527232312531.png)
+
+![image-20220527232333681](../../../../AppData/Roaming/Typora/typora-user-images/image-20220527232333681.png)
+
+![image-20220527232715324](../../../../AppData/Roaming/Typora/typora-user-images/image-20220527232715324.png)
+
+
+
+# centos7 配置docker
+
+## 安装  yum
+
+yum install -y yum-utils \
+           device-mapper-persistent-data \
+           lvm2 --skip-broken
+
+
+
+## yum的镜像源
+
+
+
+yum-config-manager \
+    --add-repo \
+    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+    
+sed -i 's/download.docker.com/mirrors.aliyun.com\/docker-ce/g' /etc/yum.repos.d/docker-ce.repo
+
+yum makecache fast
+
+
+
+## 安装docker
+
+yum install -y docker-ce
+
+
+
+## 关闭防火墙
+
+```
+# 关闭
+systemctl stop firewalld
+# 禁止开机启动防火墙
+systemctl disable firewalld
+```
+
+## 启动docker
+
+```
+systemctl start docker  # 启动docker服务
+
+systemctl stop docker  # 停止docker服务
+
+systemctl restart docker  # 重启docker服务
+
+```
+
+## 查看docker版本
+
+docker -v
+
+## 配置docker minor 
+
+![image-20220528114235500](https://s2.loli.net/2022/05/28/NrwuiayXFjKvQzS.png)
+
+![image-20220528120904821](https://s2.loli.net/2022/05/28/CgGAOTPluV8yXbR.png)
+
+![image-20220528203541545](https://s2.loli.net/2022/05/28/EMnv4zchwsR19yB.png)
+
+
+
+
+
+# MQ
+
+## 同步调用
+
+![image-20220609222234773](../../../../AppData/Roaming/Typora/typora-user-images/image-20220609222234773.png)
+
+
+
+##   异步调用    事件驱动    由broker 通知  其他人 订阅 
+
++ 服务**解耦**   新增功能 不需要改原来代码
+
++ 没有强依赖 ,不存在级联失败
+
++ broker做为事件队列   可以**削峰** 
+
++ 要求 broker可靠 吞吐高    调用流程不好追踪 
+
+  ![image-20220609223707547](../../../../AppData/Roaming/Typora/typora-user-images/image-20220609223707547.png)
+
+# kafka  具有高吞吐  但可靠性一般  适合做 日志
+
+# Spring AMQP
+
+![image-20220610152231272](https://s2.loli.net/2022/06/10/Dbal6UIHpjouZtP.png)
+
+![image-20220610152405756](../../../../AppData/Roaming/Typora/typora-user-images/image-20220610152405756.png)
+
+#fanout  广播交换机
+
+![image-20220610183836189](../../../../AppData/Roaming/Typora/typora-user-images/image-20220610183836189.png)
+
+![image-20220610181121172](../../../../AppData/Roaming/Typora/typora-user-images/image-20220610181121172.png)
+
+#  direct exchange   根据bindingkey  直接路由到  队列
+
+![image-20220610191913462](../../../../AppData/Roaming/Typora/typora-user-images/image-20220610191913462.png)
+
+![image-20220610195950320](https://s2.loli.net/2022/06/10/z4jIvgt85lmai6o.png)
+
+#  topic exchange    根据 通配符的key   路由
+
+![image-20220610200946034](https://s2.loli.net/2022/06/10/Xw5KyTNxGiPtFrn.png)
+
+#  自定义消息序列化   pc两端相同
+
+![image-20220610221009677](https://s2.loli.net/2022/06/10/4edJq58t3FGsIAE.png)
+
++ comsumer  端也要定义bean   跟 p端 相同
+
+# ES倒排索引
+
+![image-20220611122727545](../../../../AppData/Roaming/Typora/typora-user-images/image-20220611122727545.png)
+
+# es 相比于mysql   更擅长  检索 
+
+![image-20220611125007471](https://s2.loli.net/2022/06/11/m9vzSkqiIep6ZLb.png)
+
+# IK 分词器
+
+![image-20220611140122649](../../../../AppData/Roaming/Typora/typora-user-images/image-20220611140122649.png)
+
+# RestClient
+
+![image-20220611155056589](https://s2.loli.net/2022/06/11/ahXUjGTv32A6tkx.png)
+
+![image-20220611160648349](https://s2.loli.net/2022/06/11/MARmogB48nL3eT6.png)
+
+![image-20220611172230394](https://s2.loli.net/2022/06/11/Nh4Ug7A9ButoMlm.png)
+
+# 微服务保护专题
+
+##   由一个服务失效带来的雪崩问题
+
+![image-20220612134217998](https://s2.loli.net/2022/06/12/FDYvlWyGEH4XQN3.png)
+
+# sentinal 安装   
+
+![image-20220612145646777](../../../../AppData/Roaming/Typora/typora-user-images/image-20220612145646777.png)
+
+![image-20220612150748409](../../../../AppData/Roaming/Typora/typora-user-images/image-20220612150748409.png)

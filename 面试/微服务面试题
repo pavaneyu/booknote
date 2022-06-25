@@ -1,0 +1,58 @@
+---
+title: 微服务面试题
+date: 2022年2月18日14:21:30
+tags: []
+categories: 学习笔记 
+---
+
+[toc]
+
+# SpringCloud核心组件
+
++ 服务注册与发现  Eureka  nacos   Zookeeper
++ 负债均衡  Ribbon  LoadBalancer
++ 熔断器  Hystrix   Sentinel ]
++ 网关  Gateway
++ 链路调用 追踪  Feign 
++ 监控  Admin
++   配置中心 Nacos  Config    
+
+spring security   认证和授权 
+
+# 微服务优点
+
+是一种架构风格 是相对于单体架构而言,将模块解耦  
+
+根据系统功能 划分为不同的服务,每个服务都可以单独运行,也可以有自己的技术实现,比如使用的数据库
+
+
+
+# Springcloud 生态优点
+
+# 配置中心原理
+
+将服务所需要的配置信息 从配置仓库同步到本地    达到统一配置管理目的]
+
+![image-20220308144009768](https://s2.loli.net/2022/03/08/HZfGqBp3x26lyPX.png)
+
+![image-20220308144043345](https://s2.loli.net/2022/03/08/9W6gEwDhZBPAVXN.png)
+
+![image-20220308144144944](https://s2.loli.net/2022/03/08/KEnUgFrx6ZukcjR.png)
+
+![image-20220308144304586](https://s2.loli.net/2022/03/08/g3admXC5GtbeAvS.png)
+
+![image-20220308144336398](https://s2.loli.net/2022/03/08/t8dT4i2rBf9vP6b.png)
+
+![image-20220308144423438](https://s2.loli.net/2022/03/08/amcRfVeNzsIOSEY.png)
+
+​      
+
+![image-20220308145154187](https://s2.loli.net/2022/03/08/LMi3fVzlTQBsKtk.png)
+
+![image-20220308145222573](https://s2.loli.net/2022/03/08/G7IhjqXwP2S1EFc.png)
+
+<img src="https://s2.loli.net/2022/03/14/f9MSJn37xTulRsr.png" alt="image-20220314165212925" style="zoom:150%;" />
+
+![image-20220314165536319](https://s2.loli.net/2022/03/14/miL7QjePnz82BSc.png)
+
+![image-20220315105427448](https://s2.loli.net/2022/03/15/CPIL9aQRpvblMuV.png)
